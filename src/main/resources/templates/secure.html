@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<link rel="icon" href="../static/favicon.ico"
+	th:href="@{/static/favicon.ico}" />
+<link rel="stylesheet" th:href="@{/static/css/pure-min.css}" />
+<link rel="stylesheet" th:href="@{/static/css/grids-responsive-min.css}" />
+<link rel="stylesheet" th:href="@{/static/css/login-page.css}" />
+<title>SSO Authentication Page</title>
+</head>
+<body>
+	<div class="pure-alert pure-alert-error" th:if="${param.error}"
+		th:with="errorMsg=${session['SPRING_SECURITY_LAST_EXCEPTION'].message}">
+		Reason: <span th:text="${errorMsg}">Wrong input!</span>
+	</div>
+	<main class='pure-g'>
+
+	<section id='l_section' class='pure-u-1-1 pure-u-md-1-2'>
+		 <h1>Secure</h1>
+
+		<p class='toc-notice'>
+			Pemerintah Kabupaten Subang (c) 2018</a>
+		</p>
+
+	</section>
+
+	<section id="r_section"
+		class="pure-u-1-1 pure-u-md-1-2 pure-img gambar "></section>
+
+	</main>
+
+</body>
+
+</html>
